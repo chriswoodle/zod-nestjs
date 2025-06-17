@@ -30,3 +30,5 @@ coverage
 # Generated schemas
 schema.gql
 spec.json
+
+*.tgz

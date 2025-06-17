@@ -2,7 +2,7 @@ import type {
   ReferenceObject,
   SchemaObject,
 } from 'openapi3-ts/oas31';
-import { generateSchema, OpenApiZodAny } from '@anatine/zod-openapi';
+import { generateSchema, OpenApiZodAny } from '@woodle/zod-openapi';
 import * as z from 'zod';
 
 import type { TupleToUnion, Merge } from './types';

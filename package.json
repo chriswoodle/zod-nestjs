@@ -1,7 +1,11 @@
 {
-    "name": "@anatine/zod-nestjs",
-    "version": "1.0.0-alpha.1",
+    "name": "@woodle/zod-nestjs",
+    "version": "1.0.0",
     "description": "Zod to OpenAPI converter",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/chriswoodle/zod-nestjs.git"
+    },
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "license": "MIT",
@@ -11,16 +15,17 @@
         "swagger"
     ],
     "scripts": {
+        "prepack": "yarn build",
         "build": "tsc -p tsconfig.build.json",
         "test": "jest",
         "test:watch": "jest --watch"
     },
     "dependencies": {
-        "ts-deepmerge": "^6.0.3"
+        "@nestjs/common": " ^11.0.1",
+        "@woodle/zod-openapi": "^1.0.0",
+        "zod": "^3.24.1"
     },
     "devDependencies": {
-        "@anatine/zod-openapi": "portal:../zod-openapi",
-        "@nestjs/common": " ^11.0.1",
         "@nestjs/swagger": " ^11.0.2",
         "@types/jest": "^29.5.14",
         "@types/node": "^22.10.7",
@@ -28,12 +33,12 @@
         "openapi3-ts": "^4.4.0",
         "ts-jest": "^29.1.2",
         "typescript": "^5.7.3",
-        "validator": "^13.12.0",
-        "zod": "^3.24.1"
+        "validator": "^13.12.0"
     },
     "peerDependencies": {
         "@nestjs/common": "^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0",
         "@nestjs/swagger": "^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0",
+        "@woodle/zod-openapi": "^1.0.0",
         "openapi3-ts": "4.4.0",
         "zod": "^3.20.0"
     },

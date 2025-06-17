@@ -3,7 +3,7 @@ import { ZodError } from 'zod';
 
 import { createZodDto } from './create-zod-dto';
 import { SchemaObject as SchemaObject30 } from 'openapi3-ts/oas30';
-import { OpenApiZodAny } from '@anatine/zod-openapi';
+import { OpenApiZodAny } from '@woodle/zod-openapi';
 
 describe('zod-nesjs create-zod-dto', () => {
   const testDtoSchema = z.object({

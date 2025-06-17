@@ -5,7 +5,7 @@
  * This file was copied from:
  *   https://github.com/kbkk/abitia/blob/master/packages/zod-dto/src/OpenApi/patchNestjsSwagger.ts
  */
-import {generateSchema, generateVocabulary, OpenApiZodAny} from '@anatine/zod-openapi';
+import {generateSchema, generateVocabulary, OpenApiZodAny} from '@woodle/zod-openapi';
 import type {SchemaObject} from 'openapi3-ts/oas30';
 
 interface Type<T = any> extends Function {
