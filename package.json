@@ -1,6 +1,6 @@
 {
     "name": "@woodle/zod-nestjs",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Zod to OpenAPI converter",
     "repository": {
         "type": "git",
@@ -22,7 +22,7 @@
     },
     "dependencies": {
         "@nestjs/common": " ^11.0.1",
-        "@woodle/zod-openapi": "^1.0.0",
+        "@woodle/zod-openapi": "^1.0.1",
         "zod": "^3.24.1"
     },
     "devDependencies": {
@@ -38,7 +38,7 @@
     "peerDependencies": {
         "@nestjs/common": "^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0",
         "@nestjs/swagger": "^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0",
-        "@woodle/zod-openapi": "^1.0.0",
+        "@woodle/zod-openapi": "^1.0.1",
         "openapi3-ts": "4.4.0",
         "zod": "^3.20.0"
     },
