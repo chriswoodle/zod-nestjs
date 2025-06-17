@@ -1,6 +1,6 @@
 {
     "name": "@woodle/zod-nestjs",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Zod to OpenAPI converter",
     "repository": {
         "type": "git",

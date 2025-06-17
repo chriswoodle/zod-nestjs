@@ -65,20 +65,20 @@ export type ZodDtoStatic<T extends CompatibleZodType = CompatibleZodType> = {
 // };
 
 // Function overloads
-function createZodDto<T extends zodOpenApi30.OpenApiZodAny>(
+export function createZodDto<T extends zodOpenApi30.OpenApiZodAny>(
     zodSchema: T,
     openApiVersion: '3.0'
 ): ZodDtoStatic<T>;
-function createZodDto<T extends zodOpenApi31.OpenApiZodAny>(
+export function createZodDto<T extends zodOpenApi31.OpenApiZodAny>(
     zodSchema: T,
     openApiVersion: '3.1'
 ): ZodDtoStatic<T>;
-function createZodDto<T extends zodOpenApi30.OpenApiZodAny>(
+export function createZodDto<T extends zodOpenApi30.OpenApiZodAny>(
     zodSchema: T,
     openApiVersion?: '3.0'
 ): ZodDtoStatic<T>;
 // Implementation
-function createZodDto<T extends zodOpenApi30.OpenApiZodAny | zodOpenApi31.OpenApiZodAny>(
+export function createZodDto<T extends zodOpenApi30.OpenApiZodAny | zodOpenApi31.OpenApiZodAny>(
     zodSchema: T,
     openApiVersion: '3.0' | '3.1' = '3.0'
 ): ZodDtoStatic<T> {
