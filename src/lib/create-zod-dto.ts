@@ -4,7 +4,7 @@ import type {
 } from 'openapi3-ts/oas31';
 import type { SchemaObject as SchemaObject30, ReferenceObject as ReferenceObject30 } from 'openapi3-ts/oas30';
 
-import { zodOpenApi30, zodOpenApi31 } from '@woodle/zod-openapi';
+import { OpenApiZodAny, generateSchema } from '@woodle/zod-openapi';
 import * as z from 'zod';
 
 import type { TupleToUnion, Merge } from './types';
@@ -64,23 +64,9 @@ export type ZodDtoStatic<T extends CompatibleZodType = CompatibleZodType> = {
 //   required: boolean | string[];
 // };
 
-// Function overloads
-export function createZodDto<T extends zodOpenApi30.OpenApiZodAny>(
+
+export function createZodDto<T extends OpenApiZodAny>(
     zodSchema: T,
-    openApiVersion: '3.0'
-): ZodDtoStatic<T>;
-export function createZodDto<T extends zodOpenApi31.OpenApiZodAny>(
-    zodSchema: T,
-    openApiVersion: '3.1'
-): ZodDtoStatic<T>;
-export function createZodDto<T extends zodOpenApi30.OpenApiZodAny>(
-    zodSchema: T,
-    openApiVersion?: '3.0'
-): ZodDtoStatic<T>;
-// Implementation
-export function createZodDto<T extends zodOpenApi30.OpenApiZodAny | zodOpenApi31.OpenApiZodAny>(
-    zodSchema: T,
-    openApiVersion: '3.0' | '3.1' = '3.0'
 ): ZodDtoStatic<T> {
     class SchemaHolderClass {
         public static zodSchema = zodSchema;
@@ -88,7 +74,7 @@ export function createZodDto<T extends zodOpenApi30.OpenApiZodAny | zodOpenApi31
 
         constructor() {
             console.log('zodSchema', zodSchema);
-            this.schema = openApiVersion === '3.0' ? zodOpenApi30.generateSchema(zodSchema as zodOpenApi30.OpenApiZodAny) : zodOpenApi31.generateSchema(zodSchema as zodOpenApi31.OpenApiZodAny);
+            this.schema = generateSchema(zodSchema);
         }
 
         /** Found from METADATA_FACTORY_NAME

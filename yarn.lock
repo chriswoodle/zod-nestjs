@@ -965,7 +965,7 @@ __metadata:
     "@nestjs/swagger": "npm: ^11.0.2"
     "@types/jest": "npm:^29.5.14"
     "@types/node": "npm:^22.10.7"
-    "@woodle/zod-openapi": "npm:^1.0.1"
+    "@woodle/zod-openapi": "npm:^1.0.2"
     jest: "npm:^29.7.0"
     openapi3-ts: "npm:^4.4.0"
     ts-jest: "npm:^29.1.2"
@@ -981,16 +981,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@woodle/zod-openapi@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@woodle/zod-openapi@npm:1.0.1"
+"@woodle/zod-openapi@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "@woodle/zod-openapi@npm:1.0.2"
   dependencies:
     ts-deepmerge: "npm:^6.0.3"
     zod: "npm:^3.24.1"
   peerDependencies:
     openapi3-ts: 4.4.0
     zod: ^3.24.1
-  checksum: 10c0/8b1b9244770fdcbdc747307fe87519b7dff3c50b5126fea4774db02dd9608c4bab372d07b1702e61b149e814eb47a9433dd72c573c5b957d827a708c60ca8bc4
+  checksum: 10c0/9db8dbffda9d5508b622386fe9d1901e3ac7d2b174e8ba6c6ed8c7251a49dd549beb97c3a346d330646e6131796fa8ff6baf3d6f3f2ed90c9acfcc1ae35c0cec
   languageName: node
   linkType: hard
 
