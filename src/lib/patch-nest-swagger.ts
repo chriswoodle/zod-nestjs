@@ -53,7 +53,7 @@ export const patchNestjsSwagger = (
         }
         // console.log({vocabulary});
         schemas[type.name] = generateSchema(type.zodSchema, { vocabulary });
-        // console.log('schemas[type.name]',schemas[type.name]);
+        // console.log(`schemas[${type.name}]`, JSON.stringify(schemas[type.name], null, 2));
         return type.name;
     };
 };

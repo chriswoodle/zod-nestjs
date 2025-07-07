@@ -149,10 +149,7 @@ export const createZodDto = <T extends OpenApiZodAny>(
         convertedSchemaObject.type = 'string'; // There ist no explicit null value in OpenAPI 3.0
         convertedSchemaObject.nullable = true;
       }
-      // Array handling (NestJS references 'isArray' boolean)
-      if (convertedSchemaObject.type === 'array') {
-        convertedSchemaObject.isArray = true;
-      }
+    
       // Exclusive minimum and maximum
       const { exclusiveMinimum, exclusiveMaximum } = schemaObject;
       if (exclusiveMinimum !== undefined) {
